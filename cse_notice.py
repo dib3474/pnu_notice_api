@@ -12,7 +12,7 @@ def get_items(data):
 
 def extract_item(item):
     title = item.find("title").text
-    date = item.find("pubdate").text
+    date = item.find("pubdate").text.split()[0]
     link = item.find("link").next_sibling.text.replace("\r", "").replace("\t", "").replace("\n", "")
     author = item.find("author").text
     return {
