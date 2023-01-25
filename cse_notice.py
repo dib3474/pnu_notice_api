@@ -29,7 +29,7 @@ def extract_items(items):
     return notice_list
 
 def get_notice():
-    url = 'https://cse.pusan.ac.kr/bbs/cse/2605/rssList.do?row=50'
+    url = 'https://cse.pusan.ac.kr/bbs/cse/2605/rssList.do?row=30'
     html = get_html(url)
     items = get_items(html)
     notice_list = extract_items(items)
